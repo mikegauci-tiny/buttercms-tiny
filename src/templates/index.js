@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom"
 import Layout from "../containers/Layout"
 import FeaturesSection from "../components/FeaturesSection"
 import HeroSection from "../components/HeroSection"
+import CustomerLogos from "../components/CustomerLogos"
 import TestimonialsSection from "../components/TestimonialsSection"
 import BlogSection from "../components/BlogSection"
 import TwoColumnWithImageSection from "../components/TwoColumnWithImageSection"
@@ -50,6 +51,8 @@ const IndexPage = () => {
         switch (bodyElement.type) {
           case "hero":
             return <HeroSection fields={bodyElement.fields} key={i} />
+          case "customer_logos":
+            return <CustomerLogos fields={bodyElement.fields} key={i} />            
           case "two_column_with_image":
             return <TwoColumnWithImageSection fields={bodyElement.fields} key={i} />
           case "features":
