@@ -88,7 +88,8 @@ h4,
 h5,
 h6 {
   font-weight: 700;
-  margin: 0px;
+  color: #070b1a;
+  margin-bottom: 1rem;
 }
 
 h1 a,
@@ -108,7 +109,11 @@ h1 {
 }
 
 h2 {
-  font-size: 45px;
+  font-size: 48px;
+}
+
+h3 {
+  font-size: 40px;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -122,12 +127,8 @@ h2 {
   }
 }
 
-h3, .single-post-header, .blog-roll-card-header {
-  font-size: 25px;
-}
-
 h4 {
-  font-size: 20px;
+  font-size: 24px;
 }
 
 h5 {
@@ -146,10 +147,9 @@ ol {
 }
 
 p {
-  font-size: 16px;
+  font-size: 1.125rem;
   font-weight: 400;
   line-height: 25px;
-  margin: 0px;
   color: #070b1a;
 }
 
@@ -924,6 +924,165 @@ p {
 
 .demo-editor {
   margin: 5rem 0;
+}
+
+/* ===============================
+    Content Box CSS
+================================== */
+
+.content-box {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.content-box > div {
+  padding: 0;
+}
+
+/* ===============================
+    Integrations CSS
+================================== */
+
+.integrations {
+  max-width: 64rem;
+  height: 100%;
+  margin: 4rem auto 6rem;
+  background: #eff1f5;
+  padding: 3rem 0;
+  border-radius: 10px;
+}
+
+.integrations-wrapper {
+  max-width: 48rem;
+  margin: 30px auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.integrations-wrapper a {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(223, 227, 236, 0.5);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  width: 5.5rem;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  position: relative;
+  height: 100px;
+}
+
+.integrations-wrapper a img:first-of-type,
+.integrations-wrapper a:hover img + img {
+  transition: .3s 0s ease opacity;
+}
+
+.integrations-wrapper a img + img, 
+.integrations-wrapper a:hover img:first-of-type {
+  transition: .2s .1s ease opacity;
+}
+
+.integrations-wrapper a img:last-of-type {
+  position: absolute;
+  opacity: 0;
+}
+
+.integrations-wrapper a img:first-of-type {
+  opacity: 1;
+}
+
+.integrations-wrapper a:hover img:last-of-type {
+  opacity: 1;
+}
+
+.integrations-wrapper a:hover img:first-of-type {
+  opacity: 0;
+}
+
+.integrations-wrapper p {
+  font-size: 0.75rem;
+  text-align: center;
+  line-height: 1.33;
+}
+
+.integrations-content {
+  width: 44rem;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 0.25rem;
+}
+
+.integrations-content h2 {
+  margin-bottom: 1rem;
+}
+
+.integrations-content p {
+  color: #17224f;
+  margin-bottom: 2rem;
+}
+
+.integrations-content a.darkblue {
+  background: #17224f;
+}
+
+.integrations-content a.lightblue {
+  background: #335dff;
+}
+
+/* ===============================
+    TWO COLUMN IMAGE BANNER CSS
+================================== */
+
+.two-columns-image-banner {
+  max-width: 64rem;
+  margin: 3rem auto;
+  gap: 3rem;
+  width: 100%;
+}
+
+.two-columns-image-banner .tcib-wrapper {
+  background: #F9F9FB;
+  padding: 0 3rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  margin-bottom: 2rem;
+}
+
+.two-columns-image-banner .tcib-content p {
+  font-size: 1.125rem;
+}
+
+/* ===============================
+    ICON BOX CSS
+================================== */
+
+.icon-box {
+  max-width: 64rem;
+  margin: 3rem auto;
+  width: 100%;
+}
+
+.icon-box-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 31%;
+  background: #F9F9FB;
+  padding: 1.5rem 1rem;
+  margin: 0.5rem;
+  border-radius: 10px;
+}
+
+.icon-box-wrapper img {
+  width: 2.5rem;
+  margin-bottom: 1rem;
 }
 
 /* ===============================

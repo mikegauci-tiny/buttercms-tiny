@@ -6,6 +6,9 @@ import HeroSection from "../components/HeroSection"
 import CustomerLogos from "../components/CustomerLogos"
 import DemoEditor from "../components/DemoEditor"
 import ContentBox from "../components/ContentBox"
+import Integrations from "../components/Integrations"
+import TwoColumnsImageBanner from "../components/TwoColumnsImageBanner"
+import IconBox from "../components/IconBox"
 import TestimonialsSection from "../components/TestimonialsSection"
 import BlogSection from "../components/BlogSection"
 import TwoColumnWithImageSection from "../components/TwoColumnWithImageSection"
@@ -58,7 +61,13 @@ const IndexPage = () => {
           case "demo_editor":
             return <DemoEditor fields={bodyElement.fields} key={i} />                  
           case "content_box":
-            return <ContentBox fields={bodyElement.fields} key={i} />                  
+            return <ContentBox fields={bodyElement.fields} key={i} />   
+          case "integrations":
+            return <Integrations fields={bodyElement.fields} key={i} />                              
+          case "two_column_image_banner":
+            return <TwoColumnsImageBanner fields={bodyElement.fields} key={i} />                              
+          case "icon_box":
+            return <IconBox fields={bodyElement.fields} key={i} />                              
           case "two_column_with_image":
             return <TwoColumnWithImageSection fields={bodyElement.fields} key={i} />
           case "features":
