@@ -9,6 +9,9 @@ import ContentBox from "../components/ContentBox"
 import Integrations from "../components/Integrations"
 import TwoColumnsImageBanner from "../components/TwoColumnsImageBanner"
 import IconBox from "../components/IconBox"
+import WallofTweets from "../components/WallofTweets"
+import IconBoxList from "../components/IconBoxList"
+import Buttons from "../components/Buttons"
 import TestimonialsSection from "../components/TestimonialsSection"
 import BlogSection from "../components/BlogSection"
 import TwoColumnWithImageSection from "../components/TwoColumnWithImageSection"
@@ -67,13 +70,13 @@ const IndexPage = () => {
           case "two_column_image_banner":
             return <TwoColumnsImageBanner fields={bodyElement.fields} key={i} />                              
           case "icon_box":
-            return <IconBox fields={bodyElement.fields} key={i} />                              
-          case "two_column_with_image":
-            return <TwoColumnWithImageSection fields={bodyElement.fields} key={i} />
-          case "features":
-            return <FeaturesSection fields={bodyElement.fields} key={i} />
-          case "testimonials":
-            return <TestimonialsSection fields={bodyElement.fields} key={i} />
+            return <IconBox fields={bodyElement.fields} key={i} />
+          case "wall_of_tweets":
+            return <WallofTweets fields={bodyElement.fields} key={i} />
+          case "icon_box_list":
+            return <IconBoxList fields={bodyElement.fields} key={i} />            
+          case "buttons":
+            return <Buttons fields={bodyElement.fields} key={i} />            
           default:
             return null
         }

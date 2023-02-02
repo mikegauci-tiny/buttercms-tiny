@@ -1026,12 +1026,12 @@ p {
   margin-bottom: 2rem;
 }
 
-.integrations-content a.darkblue {
-  background: #17224f;
+a.darkblue {
+  background: #17224f !important;
 }
 
-.integrations-content a.lightblue {
-  background: #335dff;
+a.lightblue {
+  background: #335dff !important;
 }
 
 /* ===============================
@@ -1066,7 +1066,7 @@ p {
 
 .icon-box {
   max-width: 64rem;
-  margin: 3rem auto;
+  margin: 3rem auto 6rem;
   width: 100%;
 }
 
@@ -1083,6 +1083,106 @@ p {
 .icon-box-wrapper img {
   width: 2.5rem;
   margin-bottom: 1rem;
+}
+
+/* ===============================
+    WALL OF TWEETS CSS
+================================== */
+
+section.wall-of-tweets {
+  max-width: 64rem;
+  margin: 2rem auto;
+}
+
+.wot-wrapper {
+  -webkit-column-count: 3;
+  column-count: 3;
+  gap: 1rem;
+}
+
+.wot-wrapper .wot-box {
+  background: #EEF1F5;
+  border-radius: 10px;
+  padding: 2rem;
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.wot-wrapper .wot-box img {
+  width: 2.2rem;
+  border-radius: 50px;
+}
+
+.wot-wrapper .wot-box strong {
+  color: #070b1a;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.43;
+}
+
+.wot-wrapper .wot-box span {
+  color: #4E5B7E;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.43;
+  margin: 0 0 1rem 0;
+  display: block;
+}
+
+.wot-wrapper .wysiwyg-editor span,
+.wot-wrapper .wysiwyg-editor p {
+  color: initial;
+  font-size: initial;
+  font-weight: initial;
+  line-height: initial;
+  margin: initial;
+  display: initial;
+}
+
+.wot-wrapper .wot-box:nth-child(7) {
+  margin-top: 400px;
+}
+
+/* ===============================
+    ICON BOX LIST CSS
+================================== */
+
+.icon-box-list {
+  max-width: 64rem;
+  margin: 6rem auto 8rem;
+  width: 100%;
+}
+
+.icon-box-wrapper-list {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  background: #F9F9FB;
+  padding: 2rem 3rem;
+  border-radius: 10px;
+  margin: 1rem;
+}
+
+.icon-box-wrapper-list img {
+  width: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.icon-box-wrapper-list ul li {
+  position: relative;
+  padding-left: 2rem;
+  font-size: 1.125rem;
+  margin-bottom: 0.6rem;
+}
+
+.icon-box-wrapper-list ul li::before {
+  background-image: url(https://cdn.buttercms.com/QAJBrnp1SK2FZsFRR7mD);
+  position: absolute;
+  width: 20px;
+  height: 30px;
+  content: "";
+  left: 0;
 }
 
 /* ===============================

@@ -19,7 +19,7 @@ const Integrations = (props) => {
           <div className="integrations-content">
             <h3>{props.fields.heading}</h3>
             <p>{props.fields.subheading}</p>
-            {props.fields.buttons.map((item) => {
+            {props.fields.button.map((item) => {
               return(
                 <a href={item.button_link} className={item.button_color + " " + "main-btn blue btn-hover"} target="_blank">{item.button_label}</a>
               )
