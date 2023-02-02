@@ -4,6 +4,8 @@ import Layout from "../containers/Layout"
 import FeaturesSection from "../components/FeaturesSection"
 import HeroSection from "../components/HeroSection"
 import CustomerLogos from "../components/CustomerLogos"
+import DemoEditor from "../components/DemoEditor"
+import ContentBox from "../components/ContentBox"
 import TestimonialsSection from "../components/TestimonialsSection"
 import BlogSection from "../components/BlogSection"
 import TwoColumnWithImageSection from "../components/TwoColumnWithImageSection"
@@ -52,7 +54,11 @@ const IndexPage = () => {
           case "hero":
             return <HeroSection fields={bodyElement.fields} key={i} />
           case "customer_logos":
-            return <CustomerLogos fields={bodyElement.fields} key={i} />            
+            return <CustomerLogos fields={bodyElement.fields} key={i} />
+          case "demo_editor":
+            return <DemoEditor fields={bodyElement.fields} key={i} />                  
+          case "content_box":
+            return <ContentBox fields={bodyElement.fields} key={i} />                  
           case "two_column_with_image":
             return <TwoColumnWithImageSection fields={bodyElement.fields} key={i} />
           case "features":
