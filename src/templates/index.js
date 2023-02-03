@@ -12,6 +12,7 @@ import IconBox from "../components/IconBox"
 import WallofTweets from "../components/WallofTweets"
 import IconBoxList from "../components/IconBoxList"
 import Buttons from "../components/Buttons"
+import NewsletterWide from "../components/NewsletterWide"
 import TestimonialsSection from "../components/TestimonialsSection"
 import BlogSection from "../components/BlogSection"
 import TwoColumnWithImageSection from "../components/TwoColumnWithImageSection"
@@ -20,6 +21,13 @@ import SEO from "../components/SEO";
 import Spinner from "../components/Spinner";
 import { butterCMS } from "../utils/buttercmssdk";
 import { useMenuItems } from "../utils/hooks";
+import {
+  useFooterProductItems,
+  useFooterPricingItems,
+  useFooterDeveloperItems,
+  useFooterCompanyItems,
+  useSocialMediaItems,
+} from "../utils/hooks";
 
 const IndexPage = () => {
   const [error, setError] = useState(false);
@@ -29,6 +37,11 @@ const IndexPage = () => {
   const { slug } = useParams();
 
   let menuItems = useMenuItems();
+  let footerProductMenuItems = useFooterProductItems();
+  let footerPricingMenuItems = useFooterPricingItems();
+  let footerDeveloperMenuItems = useFooterDeveloperItems();
+  let footerCompanyMenuItems = useFooterCompanyItems();
+  let socialMediaIconItems = useSocialMediaItems();
 
   useEffect(() => {
     const loadData = async () => {
@@ -52,7 +65,14 @@ const IndexPage = () => {
   if (loader) return (<Spinner />)
 
   return (
-    <Layout menuItems={menuItems}>
+    <Layout
+      menuItems={menuItems}
+      footerProductMenuItems={footerProductMenuItems}
+      footerPricingMenuItems={footerPricingMenuItems}
+      footerDeveloperMenuItems={footerDeveloperMenuItems}
+      footerCompanyMenuItems={footerCompanyMenuItems}
+      socialMediaIconItems={socialMediaIconItems}
+    >
       <SEO {...page.fields.seo} />
 
       {page.fields.body.map((bodyElement, i) => {
@@ -77,6 +97,8 @@ const IndexPage = () => {
             return <IconBoxList fields={bodyElement.fields} key={i} />            
           case "buttons":
             return <Buttons fields={bodyElement.fields} key={i} />            
+          case "newsletter_wide":
+            return <NewsletterWide fields={bodyElement.fields} key={i} />            
           default:
             return null
         }

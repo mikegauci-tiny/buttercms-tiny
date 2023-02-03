@@ -9,7 +9,15 @@ import "../assets/css/lineicons.css"
 import "../assets/css/tiny-slider.css"
 import "../assets/css/main.css"
 
-const Layout = ({ children, menuItems }) => {
+const Layout = ({
+  children,
+  menuItems,
+  footerProductMenuItems,
+  footerPricingMenuItems,
+  footerDeveloperMenuItems,
+  footerCompanyMenuItems,
+  socialMediaIconItems,
+}) => {
   const [activeLink, setActiveLink] = useState("");
   const location = useLocation()
 
@@ -52,7 +60,15 @@ const Layout = ({ children, menuItems }) => {
 
       <ScrollToTop />
 
-      <Footer menuItems={menuItems} activeLink={activeLink} />
+      <Footer
+        menuItems={menuItems}
+        footerProductMenuItems={footerProductMenuItems}
+        footerPricingMenuItems={footerPricingMenuItems}
+        footerDeveloperMenuItems={footerDeveloperMenuItems}
+        footerCompanyMenuItems={footerCompanyMenuItems}
+        socialMediaIconItems={socialMediaIconItems}
+        activeLink={activeLink}
+      />
     </>
   )
 }
