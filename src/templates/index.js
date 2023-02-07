@@ -14,7 +14,6 @@ import IconBoxList from "../components/IconBoxList"
 import Buttons from "../components/Buttons"
 import NewsletterWide from "../components/NewsletterWide"
 import TestimonialsSection from "../components/TestimonialsSection"
-import BlogSection from "../components/BlogSection"
 import TwoColumnWithImageSection from "../components/TwoColumnWithImageSection"
 import NotFoundSection from "../components/NotFoundSection"
 import SEO from "../components/SEO";
@@ -103,8 +102,6 @@ const IndexPage = () => {
             return null
         }
       })}
-
-      <BlogSection blogPosts={blogPosts} />
     </Layout>
   )
 }
